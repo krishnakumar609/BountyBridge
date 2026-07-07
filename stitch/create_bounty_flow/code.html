@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BountyBridge - Create Bounty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#baccb4",
+                      "on-error": "#ffffff",
+                      "surface-container": "#f0eded",
+                      "on-tertiary-container": "#f8fff0",
+                      "outline": "#747871",
+                      "primary": "#50604d",
+                      "on-primary-fixed": "#111f10",
+                      "on-surface": "#1b1c1c",
+                      "on-primary-fixed-variant": "#3b4b39",
+                      "on-secondary-fixed-variant": "#4e453a",
+                      "on-background": "#1b1c1c",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary-fixed-variant": "#354d30",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#b3cea9",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dcd9d9",
+                      "primary-container": "#687965",
+                      "on-primary-container": "#f7fff1",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#ceebc4",
+                      "secondary-container": "#ebdece",
+                      "inverse-surface": "#303030",
+                      "surface-tint": "#52634f",
+                      "secondary-fixed-dim": "#d1c5b6",
+                      "surface-bright": "#fcf9f8",
+                      "surface-variant": "#e4e2e1",
+                      "primary-fixed": "#d5e8cf",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#4a6244",
+                      "secondary-fixed": "#eee0d1",
+                      "secondary": "#665d51",
+                      "primary-fixed-dim": "#baccb4",
+                      "on-tertiary-fixed": "#0a2008",
+                      "outline-variant": "#c4c8bf",
+                      "surface": "#fcf9f8",
+                      "tertiary-container": "#627b5b",
+                      "on-secondary-fixed": "#211b11",
+                      "on-surface-variant": "#444842",
+                      "on-secondary-container": "#6b6155",
+                      "surface-container-highest": "#e4e2e1",
+                      "surface-container-high": "#eae7e7",
+                      "inverse-on-surface": "#f3f0f0",
+                      "background": "#fcf9f8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "container-max": "1280px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "xl": "40px",
+                      "margin": "32px",
+                      "md": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-hero": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #DCCFC0; /* Secondary Background Level 0 */
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-low'); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant'); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline'); 
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden bg-[#DCCFC0]"> <!-- Strict Level 0 Background -->
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r border-outline-variant dark:border-outline-variant bg-surface-container-low dark:bg-surface-container-low flex-shrink-0 z-20 shadow-sm relative">
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-xs">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">BountyBridge</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant ml-1">Stellar Network</p>
+</div>
+<nav class="flex-1 overflow-y-auto py-lg px-md space-y-sm">
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+<span class="font-label-lg text-label-lg">Explore</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">task</span>
+<span class="font-label-lg text-label-lg">My Bounties</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">send</span>
+<span class="font-label-lg text-label-lg">Submissions</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">payments</span>
+<span class="font-label-lg text-label-lg">Rewards</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-lg text-label-lg">Profile</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 rounded-lg transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="p-md mt-auto border-t border-outline-variant">
+<button class="w-full bg-[#778873] text-[#FDF6ED] font-label-lg text-label-lg py-3 rounded-lg border-t border-white/20 hover:opacity-90 transition-opacity flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">add</span>
+                 Create Bounty
+            </button>
+<div class="mt-md flex items-center gap-sm">
+<img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A small circular user profile avatar showing a professional looking woman in her 30s with short dark hair, wearing a neutral colored top, set against a soft, bright background that matches the handcrafted minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKOq6KS14xTHvHA8Y1rddWmf0rIFDb3NWvlPY60H6IuwnzuKUw_LLMd82dqk49RwIbH6cZ0-XwqVFPP_WvCUOSSUTzNkdn7imxqAjO3gFm6vyo5xBn3Pq8i1M8sp_X-obS-zxIe6UQwtQ1UpJeWeuFNMfQlr5FoGzHpC2GCu9qWvf7fsSFKIHpI-7UYtUV_LV3Ga-dBwEJsKlKqZQ2fssTagD9TfTeS-poU4M2srDPG7lcE9lGWj0qwuFz4Mru5NhPyyvwgTG7dL7z"/>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface">Alex Builder</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">GD4...W9K</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin py-md bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+<div class="flex items-center gap-md md:hidden">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">BountyBridge</span>
+</div>
+<div class="flex-1 max-w-md hidden md:block">
+<!-- Search bar omitted for focus on creation task, or kept minimal -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-[#F5EEE4] border border-outline-variant rounded-full py-2 pl-10 pr-4 font-body-sm text-body-sm focus:outline-none focus:border-[#778873] focus:ring-2 focus:ring-[#778873]/20 transition-all text-on-surface placeholder:text-on-surface-variant" placeholder="Search bounties..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</button>
+<button class="hidden md:flex bg-transparent border-2 border-[#DCCFC0] text-primary font-label-lg text-label-lg px-4 py-2 rounded-full hover:bg-surface-variant/50 transition-colors">
+                    Connect Wallet
+                </button>
+<img alt="User Avatar" class="w-8 h-8 rounded-full object-cover border border-outline-variant md:hidden" data-alt="A small circular user profile avatar showing a professional looking woman in her 30s with short dark hair, wearing a neutral colored top, set against a soft, bright background that matches the handcrafted minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOGSYtTX2MEfWh9RBNLRHE7xJfAe7A3_koCeP2bQsWupR176IbdP54-4GXSEURNGZh97MWFr_1aR0s-r6QF1FqYaDBIYzRdGgTIpelaDNThPiAh-VBV3RKUkr5sr27OQt5lbTHpWrf3oWfExMueUggyJG4p8efHP41GA5Bdzayse5Ou7EaqbRnHeqc6hz8ae2PlUxls5reH8CQxvIF-4zc5sF8cRrqhSIpPPAVjY6pt_jddRaFbfsndIsc0u49lbrBfT0YfFmQa-Ht"/>
+</div>
+</header>
+<!-- Form Canvas (Level 1 Surface) -->
+<div class="flex-1 overflow-y-auto p-md md:p-xl flex justify-center w-full">
+<div class="max-w-3xl w-full">
+<!-- Header -->
+<div class="mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Create New Bounty</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Define the task, set the reward, and find top builders on the Stellar Network.</p>
+</div>
+<!-- Progress Tracker -->
+<div class="flex items-center justify-between mb-xl relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[1px] bg-outline-variant -z-10"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-[2px] bg-[#778873] -z-10 transition-all duration-500"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-xs bg-[#DCCFC0] px-2">
+<div class="w-8 h-8 rounded-full bg-[#778873] text-[#FDF6ED] flex items-center justify-center font-label-lg text-label-lg border-2 border-[#DCCFC0]">1</div>
+<span class="font-label-sm text-label-sm text-on-surface">Details</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-xs bg-[#DCCFC0] px-2">
+<div class="w-8 h-8 rounded-full bg-[#FDF6ED] text-on-surface-variant flex items-center justify-center font-label-lg text-label-lg border-2 border-outline-variant">2</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reward</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-xs bg-[#DCCFC0] px-2">
+<div class="w-8 h-8 rounded-full bg-[#FDF6ED] text-on-surface-variant flex items-center justify-center font-label-lg text-label-lg border-2 border-outline-variant">3</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Requirements</span>
+</div>
+</div>
+<!-- Form Container (Level 1 Paper) -->
+<div class="bg-[#FDF6ED] border border-[#E8DFD5] rounded-xl p-lg md:p-xl shadow-[0_4px_20px_rgba(45,45,45,0.04)] mb-xl">
+<form class="space-y-lg" id="bounty-form">
+<!-- Step 1: Details (Active) -->
+<div class="space-y-lg block" id="step-1">
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Bounty Title</label>
+<input class="w-full bg-[#F5EEE4] border border-[#E8DFD5] rounded-lg p-3 font-body-md text-body-md focus:outline-none focus:border-[#778873] focus:ring-2 focus:ring-[#778873]/20 transition-all text-on-surface placeholder:text-on-surface-variant" placeholder="e.g., Integrate Soroban Smart Contracts" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Description</label>
+<textarea class="w-full bg-[#F5EEE4] border border-[#E8DFD5] rounded-lg p-3 font-body-md text-body-md focus:outline-none focus:border-[#778873] focus:ring-2 focus:ring-[#778873]/20 transition-all text-on-surface placeholder:text-on-surface-variant resize-none" placeholder="Describe the problem, goals, and technical scope..." rows="4"></textarea>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Category</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="category" type="radio"/>
+<div class="px-4 py-2 rounded-lg border border-outline-variant text-center font-label-sm text-label-sm text-on-surface-variant peer-checked:bg-[#778873]/10 peer-checked:border-[#778873] peer-checked:text-[#778873] transition-all hover:bg-surface-variant/50">
+                                            Smart Contracts
+                                        </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="category" type="radio"/>
+<div class="px-4 py-2 rounded-lg border border-outline-variant text-center font-label-sm text-label-sm text-on-surface-variant peer-checked:bg-[#778873]/10 peer-checked:border-[#778873] peer-checked:text-[#778873] transition-all hover:bg-surface-variant/50">
+                                            Frontend
+                                        </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="category" type="radio"/>
+<div class="px-4 py-2 rounded-lg border border-outline-variant text-center font-label-sm text-label-sm text-on-surface-variant peer-checked:bg-[#778873]/10 peer-checked:border-[#778873] peer-checked:text-[#778873] transition-all hover:bg-surface-variant/50">
+                                            Design
+                                        </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="category" type="radio"/>
+<div class="px-4 py-2 rounded-lg border border-outline-variant text-center font-label-sm text-label-sm text-on-surface-variant peer-checked:bg-[#778873]/10 peer-checked:border-[#778873] peer-checked:text-[#778873] transition-all hover:bg-surface-variant/50">
+                                            Documentation
+                                        </div>
+</label>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-lg border-t border-[#E8DFD5] flex justify-end gap-md">
+<button class="px-6 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" type="button">Cancel</button>
+<button class="px-6 py-2 rounded-lg bg-[#778873] text-[#FDF6ED] font-label-lg text-label-lg border-t border-white/20 hover:opacity-90 transition-opacity flex items-center gap-sm" type="button">
+                                Continue
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+</body></html>

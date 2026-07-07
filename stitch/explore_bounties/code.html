@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BountyBridge - Explore</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400;
+        }
+        
+        /* Custom Scrollbar for a more polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #e4e2e1; /* surface-variant */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #c4c8bf; /* outline-variant */
+        }
+    </style>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#baccb4",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-container": "#f8fff0",
+                        "outline": "#747871",
+                        "primary": "#50604d",
+                        "on-primary-fixed": "#111f10",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed-variant": "#3b4b39",
+                        "on-secondary-fixed-variant": "#4e453a",
+                        "on-background": "#1b1c1c",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-fixed-variant": "#354d30",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b3cea9",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dcd9d9",
+                        "primary-container": "#687965",
+                        "on-primary-container": "#f7fff1",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ceebc4",
+                        "secondary-container": "#ebdece",
+                        "inverse-surface": "#303030",
+                        "surface-tint": "#52634f",
+                        "secondary-fixed-dim": "#d1c5b6",
+                        "surface-bright": "#fcf9f8",
+                        "surface-variant": "#e4e2e1",
+                        "primary-fixed": "#d5e8cf",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#4a6244",
+                        "secondary-fixed": "#eee0d1",
+                        "secondary": "#665d51",
+                        "primary-fixed-dim": "#baccb4",
+                        "on-tertiary-fixed": "#0a2008",
+                        "outline-variant": "#c4c8bf",
+                        "surface": "#fcf9f8",
+                        "tertiary-container": "#627b5b",
+                        "on-secondary-fixed": "#211b11",
+                        "on-surface-variant": "#444842",
+                        "on-secondary-container": "#6b6155",
+                        "surface-container-highest": "#e4e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-on-surface": "#f3f0f0",
+                        "background": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "margin": "32px",
+                        "md": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-hero": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden flex h-screen">
+<!-- SideNavBar (Shared Component) -->
+<nav class="hidden md:flex flex-col h-full py-lg px-md h-screen w-64 border-r border-outline-variant bg-surface-container-low shrink-0 z-40 relative">
+<div class="flex flex-col h-full bg-surface-container-low border-r border-outline-variant absolute inset-0 py-lg px-md">
+<!-- Brand -->
+<div class="mb-xl px-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary icon-fill" style="font-size: 18px;">dashboard</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">BountyBridge</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80 mt-0.5">Stellar Network</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-2 flex-1">
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md bg-secondary-container text-on-secondary-container rounded-lg px-4 py-3 font-semibold transition-transform duration-200 hover:bg-secondary-container/90" href="#">
+<span class="material-symbols-outlined icon-fill text-primary">search</span>
+<span class="font-label-lg text-label-lg text-primary">Explore</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">task</span>
+<span class="font-label-lg text-label-lg">My Bounties</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">send</span>
+<span class="font-label-lg text-label-lg">Submissions</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">payments</span>
+<span class="font-label-lg text-label-lg">Rewards</span>
+</a>
+</li>
+</ul>
+<!-- Bottom Nav Items -->
+<div class="mt-auto flex flex-col gap-2 pt-4 border-t border-outline-variant/30">
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">person</span>
+<span class="font-label-lg text-label-lg">Profile</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant/50 transition-colors duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<div class="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin py-md bg-surface/80 backdrop-blur-md shadow-sm border-b border-outline-variant">
+<!-- Mobile Menu & Search Context -->
+<div class="flex items-center gap-4 flex-1">
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="relative w-full max-w-md hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-70">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant text-body-md text-on-surface rounded-full py-2 pl-10 pr-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-on-surface-variant/60" placeholder="Search bounties, skills, or projects..." type="text"/>
+</div>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button class="p-2 hover:bg-surface-variant/50 rounded-full transition-colors relative group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</button>
+<button class="p-2 hover:bg-surface-variant/50 rounded-full transition-colors hidden sm:block group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">account_balance_wallet</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg border-t border-white/20 shadow-[0_2px_4px_rgba(0,0,0,0.1)] hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95 whitespace-nowrap">
+                    Connect Wallet
+                </button>
+<div class="w-9 h-9 rounded-full bg-secondary-container border border-outline-variant overflow-hidden ml-2 cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFnCGnw093E4aZ0OILioRtg6kGlTSEcRVyunJuabYmfHrFMLDdiu9o-C8SrF8F07Nmj8iXYf8UeAnFpbbh8d-dU_LWNuwMw_OkQv9cDpD8zVO_0QzHv-7C9W5tkNpbAUSl0LI5qx_GF2rf8JVe9R3X5C2PobUgBScu09zbfHc761Ro8JKX376iUQ6aanBCKVOGEJbIZjCYMR0gOH3P1DWHtDPVpZ678EsbWYyZYlBwpWVNysM_8bqSDSvfROUFZhXVicy0RFEfxMBT"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 w-full max-w-container-max mx-auto px-margin py-xl flex flex-col gap-8">
+<!-- Page Header & Filters -->
+<div class="flex flex-col gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Explore Opportunities</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Discover high-value bounties and contribute to cutting-edge projects on the Stellar network.</p>
+</div>
+<!-- Advanced Filters Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-[0_4px_20px_rgba(45,45,45,0.02)]">
+<div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+<!-- Category Dropdown -->
+<div class="relative w-full sm:w-48">
+<select class="w-full appearance-none bg-surface-container-low border border-outline-variant text-body-sm text-on-surface rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer">
+<option value="">All Categories</option>
+<option value="smart-contracts">Smart Contracts</option>
+<option value="frontend">Frontend UI/UX</option>
+<option value="backend">Backend &amp; APIs</option>
+<option value="design">Design &amp; Brand</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-size: 20px;">expand_more</span>
+</div>
+<!-- Status Checkboxes -->
+<div class="flex items-center gap-4 bg-surface-container-low border border-outline-variant rounded-lg px-3 py-2 h-[38px]">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="form-checkbox text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-surface-container-lowest w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors">Open</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-surface-container-lowest w-4 h-4 bg-surface-container-lowest" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors">In Progress</span>
+</label>
+</div>
+</div>
+<!-- Reward Range (Simplified representation) -->
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Reward:</span>
+<div class="flex items-center gap-2">
+<input class="w-20 bg-surface-container-low border border-outline-variant text-body-sm text-on-surface rounded-lg py-1.5 px-2 text-center focus:outline-none focus:border-primary" placeholder="Min" type="text"/>
+<span class="text-outline-variant">-</span>
+<input class="w-20 bg-surface-container-low border border-outline-variant text-body-sm text-on-surface rounded-lg py-1.5 px-2 text-center focus:outline-none focus:border-primary" placeholder="Max" type="text"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">XLM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid View (Bounty Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter pb-xl">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-4 shadow-[0_4px_20px_rgba(45,45,45,0.02)] hover:shadow-[0_12px_32px_rgba(45,45,45,0.06)] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="inline-flex items-center gap-1.5 bg-surface-container text-on-surface px-2.5 py-1 rounded-md">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">code</span>
+<span class="font-label-sm text-label-sm">Smart Contracts</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary block">5,000 XLM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">~$600 USD</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight group-hover:text-primary transition-colors line-clamp-2">Develop Automated Market Maker (AMM) Core Logic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Build robust and secure smart contracts for a new decentralized exchange focusing on stablecoin pairs.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-size: 16px;">schedule</span>
+<span class="font-label-sm text-label-sm">5 days left</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2">
+<img alt="Contributor 1" class="w-6 h-6 rounded-full border border-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlXmUkzfEqeLOLL2Awqvzfh2kyVCt_zpcBgIz-RHWMuGYPYz0yDAyMAB0S2x-BdYyBSo9rwnBkj2fZvcxgU5BdjccsUAiGs_8XN2BT2S0CuwaP4QHhGbVT6QVhz_ZptR9Eo6OWoXuIJYu6PNxrWBYohoRAl-K5Ym89wzFUp6ExkdjAmhdQHsStjw7EzGIdx3pKnitS8P7vGoOcjNJFLkRT-cg_O52XMMan_G8GVJqpceH8YrkCBJIwm6j7rg0ejaZ5DUhs4exNnHMU"/>
+<img alt="Contributor 2" class="w-6 h-6 rounded-full border border-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEyWK-Hzskv1dBKnHooEBDzzy1kkr3p5TTStRnKqtFeVEULjxUOBYOaL0ztdtlOL5wb0HknkSl3P04gxySSMANUVqlxIYbchnf7mA24aJahWPonQmhDx9pvqidJrYZW75oKZ_F1SkqMt2PpU6UUDLd6zW7D7QONOe2O-l0qsy_iHfssScgpu7lcBNK9pAdtaJfpyUbgvyB7d9fVqwuI8xKdm9an6KjqkpCgSVkvfFOLjmC_X5PgyD6DZb_3fuwAbNBlcgkMadJG8Au"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12 bids</span>
+</div>
+</div>
+</div>
+<!-- Card 2 (Featured) -->
+<div class="group bg-surface-container-lowest border border-primary/30 rounded-xl p-md flex flex-col gap-4 shadow-[0_4px_20px_rgba(45,45,45,0.02)] hover:shadow-[0_12px_32px_rgba(45,45,45,0.06)] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/10 rounded-bl-[100px] -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="flex gap-2">
+<div class="inline-flex items-center gap-1.5 bg-surface-container text-on-surface px-2.5 py-1 rounded-md">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">brush</span>
+<span class="font-label-sm text-label-sm">Design</span>
+</div>
+<div class="inline-flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-md border border-primary/20">
+<span class="material-symbols-outlined icon-fill" style="font-size: 14px;">verified</span>
+<span class="font-label-sm text-label-sm">Verified</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary block">1,200 XLM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">~$145 USD</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight group-hover:text-primary transition-colors line-clamp-2">Design System Migration &amp; Component Library</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Convert existing Figma designs into a fully documented, accessible Tailwind component library.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-error/80">
+<span class="material-symbols-outlined" style="font-size: 16px;">timer</span>
+<span class="font-label-sm text-label-sm">Ends tomorrow</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2">
+<img alt="Contributor 3" class="w-6 h-6 rounded-full border border-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCv6_sCUdRxJUQd8ydFgBkaEp1Hdfheuasm5NxQu3p8F-k3OljLN-9KwPmBgYOF3w_P9sHf0ys9QyUqtDxOIlVDzMnP9FA-QZFlYkM0sq40chsL2Jg4qfQjHhhx0R-AYeRig4at54cOK9Ib9-TvlDCxF9ecfdsne_noVVK6tOo91hB1KKh6IEi_Jd6aaZL0qYNQTSzgqQ2mfxk2Wg_35NYBpIC2clqYAT-Nn43BFu-_cjY7aPtMffeAEWigWn1Nk_Zhv2g-ucuNjWB"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 bids</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-4 shadow-[0_4px_20px_rgba(45,45,45,0.02)] hover:shadow-[0_12px_32px_rgba(45,45,45,0.06)] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start">
+<div class="inline-flex items-center gap-1.5 bg-surface-container text-on-surface px-2.5 py-1 rounded-md">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">api</span>
+<span class="font-label-sm text-label-sm">Backend &amp; APIs</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary block">3,500 XLM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">~$420 USD</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight group-hover:text-primary transition-colors line-clamp-2">Implement Soroban Indexer Service</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Create a reliable backend service to parse and index specific contract events for the dashboard.</p>
+</div>
+<div class="mt-auto pt-4 border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-size: 16px;">schedule</span>
+<span class="font-label-sm text-label-sm">12 days left</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">No bids yet</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Illustration (Hidden by default, structure provided) -->
+<!-- 
+            <div class="flex flex-col items-center justify-center py-20 text-center opacity-70">
+                <span class="material-symbols-outlined text-outline-variant mb-4" style="font-size: 64px;">search_off</span>
+                <h3 class="font-headline-md text-headline-md text-on-surface">No opportunities found</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">We couldn't find any bounties matching your current filters. Try adjusting your search criteria.</p>
+                <button class="mt-6 font-label-lg text-label-lg text-primary border border-primary/30 px-6 py-2 rounded-lg hover:bg-primary/5 transition-colors">Clear Filters</button>
+            </div>
+            -->
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="mt-auto bg-secondary-fixed w-full py-xl border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-2">
+<span class="font-headline-sm text-headline-sm text-on-secondary-fixed">BountyBridge</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant/80">© 2024 BountyBridge. Built on Stellar.</p>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap items-center md:justify-end gap-6">
+<a class="font-label-sm text-label-sm text-on-secondary-fixed-variant/80 hover:text-on-secondary-fixed hover:underline transition-all" href="#">Docs</a>
+<a class="font-label-sm text-label-sm text-on-secondary-fixed-variant/80 hover:text-on-secondary-fixed hover:underline transition-all" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-secondary-fixed-variant/80 hover:text-on-secondary-fixed hover:underline transition-all" href="#">Stellar Network</a>
+<a class="font-label-sm text-label-sm text-on-secondary-fixed-variant/80 hover:text-on-secondary-fixed hover:underline transition-all" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-secondary-fixed-variant/80 hover:text-on-secondary-fixed hover:underline transition-all" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
