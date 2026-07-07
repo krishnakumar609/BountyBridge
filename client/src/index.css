@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-charcoal font-sans antialiased min-h-screen flex flex-col;
+    background-color: #FDF6ED;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e4e2e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c8bf;
+}
+
+/* Custom classes matching the mockup */
+.script-logo {
+  font-family: 'Great Vibes', 'Pacifico', cursive;
+}
+
+.btn-primary {
+  @apply bg-primary text-background border-t border-white/20 px-6 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-200 shadow-sm active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-accent text-charcoal px-6 py-2.5 rounded-lg font-semibold hover:bg-surface-variant/30 transition-all duration-200 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.card-shadow {
+  box-shadow: 0px 4px 20px rgba(45, 45, 45, 0.04);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0px 12px 32px rgba(45, 45, 45, 0.08);
+  transform: translateY(-2px);
+}
