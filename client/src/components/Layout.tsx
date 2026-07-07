@@ -18,7 +18,8 @@ import {
   Menu,
   X,
   Check,
-  Trash2
+  Trash2,
+  HeartHandshake
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -53,6 +54,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const bottomNavItems = [
     { label: 'Profile', icon: User, path: '/profile' },
     { label: 'Settings', icon: Settings, path: '/settings' },
+    { label: 'Feedback', icon: HeartHandshake, path: '/feedback' },
   ];
 
   const unreadCount = notifications.filter(n => !n.read).length;

@@ -14,6 +14,7 @@ import { MyBounties } from './pages/MyBounties.js';
 import { Submissions } from './pages/Submissions.js';
 import { Rewards } from './pages/Rewards.js';
 import { Settings } from './pages/Settings.js';
+import { Feedback } from './pages/Feedback.js';
 
 import './App.css';
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/submissions" element={<Submissions />} />
           <Route path="/rewards" element={<Rewards />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/feedback" element={<Feedback />} />
 
           {/* Catch-all fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
