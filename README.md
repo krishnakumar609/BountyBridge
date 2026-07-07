@@ -59,13 +59,13 @@ BountyBridge is a state-of-the-art, fully decentralized freelance and developmen
 - **Live Production URL**: [https://bountybridge.netlify.app](https://bountybridge.netlify.app)
 - **Demo Video Walkthrough**: [https://youtube.com/watch?v=demo_video_placeholder](https://youtube.com/watch?v=demo_video_placeholder)
 - **GitHub Repository**: [https://github.com/krishnakumar609/BountyBridge](https://github.com/krishnakumar609/BountyBridge)
+- **User Feedback Collection Form**: [Google User Form Link](https://forms.gle/NiPET9iwETNtsqVw6)
+- **User Testing Interactions Sheet**: [Google Sheets Audit Spreadsheet](https://docs.google.com/spreadsheets/d/1TyvFvf0WWxmXesz6Hvh3-ezBO8QXzqUnC0ZEbD5ILH4/edit?usp=sharing)
+  
 - **BountyEscrow Contract Address**: `CAXMWH5RIF3ZTH6IGKZMBMLNM6ESES56SYKZFA3BJGO37YKXTEJUM2IP`
 - **SubmissionRegistry Contract Address**: `CCV2TRDYYCGZE5AEQYZSZXVH6FYKBDPTRAXS2ZMI377ROMUULIGHKKHX`
 - **Stellar Expert explorer**: [Stellar.Expert Contract Audit Explorer](https://stellar.expert/explorer/testnet/contract/CAXMWH5RIF3ZTH6IGKZMBMLNM6ESES56SYKZFA3BJGO37YKXTEJUM2IP)
-- **Presentation Slide Deck**: [Google Slides Presentation URL](https://docs.google.com/presentation/d/presentation_placeholder/edit)
-- **User Feedback Collection Form**: [Google User Form Link](https://forms.gle/feedback_form_placeholder)
-- **User Testing Interactions Sheet**: [Google Sheets Audit Spreadsheet](https://docs.google.com/spreadsheets/d/testing_sheet_placeholder/edit)
-
+- 
 ---
 
 ## 🌟 Project Overview
