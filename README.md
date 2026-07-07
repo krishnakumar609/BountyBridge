@@ -303,7 +303,7 @@ Displays the bounty's description, creator info, deadline countdowns, and real-t
 *All mock screenshots correspond to physical application designs generated during refactoring:*
 
 #### 1. Landing Dashboard
-![Landing Dashboard Screen](client/src/assets/hero.png)
+<img width="1916" height="978" alt="image" src="https://github.com/user-attachments/assets/a1974b92-fba1-42e0-a977-0948666f718a" />
 *The landing dashboard, featuring stats on active bounties, total locked values, and completed payouts.*
 
 #### 2. Creator Escrow Locking
@@ -317,6 +317,11 @@ Displays the bounty's description, creator info, deadline countdowns, and real-t
 #### 4. Developer Submissions Panel
 ![Developer Submissions Panel Screen](stitch/dashboard_home/screen.png)
 *Displays historical submissions, project analytics, and status updates.*
+
+#### 5. Mobile UI
+
+<img width="502" height="870" alt="image" src="https://github.com/user-attachments/assets/3ea32296-9b6c-4e55-8a58-9f4d53c35af8" />
+
 
 ---
 
